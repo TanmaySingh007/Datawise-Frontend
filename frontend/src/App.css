@@ -1,0 +1,229 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+body {
+  background: var(--bg);
+  font-family: var(--font);
+}
+
+.sidebar {
+  width: 220px;
+  background: var(--sidebar-gradient);
+  color: #fff;
+  height: 100vh;
+  padding: 32px 20px 24px 20px;
+  box-sizing: border-box;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  box-shadow: var(--shadow);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  z-index: 10;
+}
+.sidebar h2 {
+  margin-top: 0;
+  margin-bottom: 40px;
+  font-size: 2rem;
+  letter-spacing: 2px;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(34,34,59,0.08);
+}
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+}
+.sidebar nav ul li {
+  margin-bottom: 22px;
+}
+.sidebar nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.15rem;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: var(--radius);
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  display: block;
+}
+.sidebar nav ul li a.active {
+  background: var(--accent);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(247,37,133,0.12);
+  animation: pop 0.2s;
+}
+@keyframes pop {
+  0% { transform: scale(1); }
+  60% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+.sidebar nav ul li a:hover {
+  background: rgba(255,255,255,0.12);
+  color: #fff;
+}
+
+.sidebar-icon {
+  margin-right: 10px;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.main-content {
+  margin-left: 240px;
+  padding: 40px 32px;
+  min-height: 100vh;
+  background: var(--bg);
+  transition: margin 0.2s;
+}
+
+@media (max-width: 800px) {
+  .sidebar {
+    width: 100vw;
+    height: auto;
+    flex-direction: row;
+    align-items: center;
+    position: static;
+    padding: 12px 8px;
+    border-radius: 0 0 var(--radius) var(--radius);
+  }
+  .sidebar nav ul {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+  }
+  .main-content {
+    margin-left: 0;
+    padding: 16px 8px;
+  }
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 32px 24px;
+  margin-bottom: 32px;
+  transition: box-shadow 0.2s;
+}
+.card:hover {
+  box-shadow: 0 8px 32px rgba(34,34,59,0.12);
+}
+
+table {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  margin-bottom: 24px;
+  width: 100%;
+  overflow: hidden;
+}
+th, td {
+  border: 1px solid #e0e0e0;
+  padding: 12px 18px;
+  text-align: left;
+}
+th {
+  background: #f1f1f1;
+}
+
+form {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 28px 20px;
+  margin-bottom: 24px;
+}
+input[type="text"], input[type="email"], select {
+  padding: 10px;
+  border: 1.5px solid #cdd2e1;
+  border-radius: 6px;
+  width: 100%;
+  margin-top: 4px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+  font-size: 1rem;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+input[type="text"]:focus, input[type="email"]:focus, select:focus {
+  border: 1.5px solid var(--primary);
+  outline: none;
+  box-shadow: 0 0 0 2px #4ea8de33;
+}
+button[type="submit"], button {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 22px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(78,168,222,0.08);
+}
+button[type="submit"]:hover, button:hover {
+  background: var(--accent);
+  box-shadow: 0 4px 16px rgba(247,37,133,0.12);
+}
+
+.section-icon {
+  margin-right: 8px;
+  color: var(--primary);
+  vertical-align: middle;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(24px);
+  animation: fadeInUp 0.7s forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
